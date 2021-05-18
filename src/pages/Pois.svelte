@@ -11,8 +11,8 @@
 </script>
 
 <div class="uk-text-center" uk-grid>
-  <div class="uk-width-2xlarge ">
-    <div class="uk-card uk-card-default uk-card-body uk-box-shadow-large uk-width-2xlarge ">
+  <div class="uk-width-4xlarge ">
+    <div class="uk-card uk-card-default uk-card-body uk-box-shadow-large uk-width-4xlarge ">
       <PoiList/>
     </div>
   </div>

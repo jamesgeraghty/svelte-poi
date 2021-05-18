@@ -23,7 +23,6 @@
     <th>Longitude</th>
     <th>User Name</th>
     <th>Categories</th>
-    <th>Gallery</th>
     <th> Delete</th>
     <th> Update</th>
     </thead>
@@ -36,8 +35,8 @@
           <td>{pointofinterst.latitude}, {pointofinterst.longitude}</td>
           <td> {pointofinterst.firstName}, {pointofinterst.lastName} </td>
           <td>{pointofinterst.category.name}</td>
-          <td><i class="fas fa-trash fa-2x" style="color:#653DC2"></i></td>
-          <td><i class="fas fa-recycle fa-2x" style="color:#653DC2"></i></td>
+          <td><i class="far fa-trash-alt fa-1x" ></i></td>
+          <td><i class="far fa-edit fa-1x" style=></i></td>
         </tr>
       {/each}
     </tbody>

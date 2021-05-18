@@ -10,7 +10,7 @@
 </script>
 
 <div class="uk-text-center" uk-grid>
-  <div class="uk-width-1-2@m">
+  <div class="uk-width-1-1@m">
     <img width="200" src="{homer2}" alt="homer">
     <p> Lets do this thing </p>
   </div>
