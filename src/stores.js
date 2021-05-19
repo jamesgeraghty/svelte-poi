@@ -15,7 +15,15 @@ export const welcomeBar = [
   },
 ];
 
-export const mainBar = [{
+export const mainBar = [
+
+  {
+    title: "Add POI",
+    icon: "fas fa-hand-holding-usd fa-3x",
+    colour: "color:rgb(153, 196, 74)",
+    link: "/#/addPoi",
+  },
+    {
   title: "Donations",
   icon: "fas fa-hand-holding-usd fa-3x",
   colour: "color:rgb(153, 196, 74)",
@@ -25,6 +33,12 @@ export const mainBar = [{
   icon: "fas fa-clipboard-list fa-3x",
   colour: "color:rgb(63, 122, 139)",
   link: "/#/categories",
+}, {
+  title: "Logout",
+  icon: "fas fa-sign-out-alt fa-3x",
+  colour: "color:rgb(156, 70, 128)",
+  link: "/#/logout",
+
 }];
 
 export const navBar = writable({
@@ -32,3 +46,10 @@ export const navBar = writable({
 });
 export const title = writable("");
 export const subTitle = writable("");
+export const user = writable({
+  firstName: "",
+  lastName: "",
+  email: "",
+  password: "",
+  _id: ""
+});
