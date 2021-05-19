@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount, getContext } from "svelte";
+    import Coordinates from "./Coordinates.svelte";
     const poiService = getContext("PoiService");
 
     let categoryList = [];
@@ -8,6 +9,10 @@
     let selectedCategory = 0;
     let methods = ["Kilcash Woods", "Kilcash Walk", "Slievenamon"]
     let errorMessage = "";
+
+
+    export let lat = 0.0;
+    export let lng = 0.0;
 
     onMount(async () => {
         categoryList = await poiService.getCategories()
@@ -78,6 +83,7 @@
             {/if}
         </div>
     </div>
+    <Coordinates bind:lat={lat} bind:lng={lng}/>
 </form>
 
 
