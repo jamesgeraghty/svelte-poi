@@ -5,6 +5,7 @@
   import Login from "./pages/Login.svelte"
   import Categories from "./pages/Categories.svelte";
   import Pois from "./pages/Pois.svelte";
+  import Addpoi from "./pages/Addpoi.svelte";
   import Navigator from "./components/Navigator.svelte";
   import Router from "svelte-spa-router";
 
@@ -15,6 +16,8 @@
     "/login": Login,
     "/categories": Categories,
     "/pois": Pois,
+    "/addPoi": Addpoi,
+    "/logout" : Main
   }
 </script>
 

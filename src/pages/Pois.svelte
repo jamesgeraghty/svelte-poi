@@ -1,6 +1,6 @@
 <script>
   import PoiList from "../components/PoiList.svelte";
-  import homer5 from "/src/assets/homer5.jpg";
+ // import homer5 from "/src/assets/homer5.jpg";
   import {navBar, mainBar, subTitle, title} from "../stores"
 
   title.set("Donation Services Inc.");

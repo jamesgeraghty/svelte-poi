@@ -32,7 +32,8 @@
           <td>{pointofinterst.poi}</td>
           <td>{pointofinterst.text}</td>
           <td> {pointofinterst.method} </td>
-          <td>{pointofinterst.latitude}, {pointofinterst.longitude}</td>
+          <td>{pointofinterst.latitude}</td>
+          <td>{pointofinterst.longitude}</td>
           <td> {pointofinterst.firstName}, {pointofinterst.lastName} </td>
           <td>{pointofinterst.category.name}</td>
           <td><i class="far fa-trash-alt fa-1x" ></i></td>
