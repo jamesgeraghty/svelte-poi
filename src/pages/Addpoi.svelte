@@ -29,7 +29,7 @@
         bar: mainBar
     });
 
-   function justDonated(amount, user) {
+   function justAdded(amount, user) {
        const poiStr = `${user.firstName} ${user.lastName} €${amount.toString()}`;
        map.addMarker({lat: lat, lng: lng}, poiStr);
        map.moveTo(12, {lat: lat, lng: lng})
@@ -45,7 +45,7 @@
     </div>
     <div class="uk-width-1-2@m ">
         <div class="uk-card uk-card-default uk-card-body uk-box-shadow-large uk-width-2xlarge ">
-            <AddPoiForm {justDonated} bind:lat={lat} bind:lng={lng}/>
+            <AddPoiForm {justAdded} bind:lat={lat} bind:lng={lng}/>
         </div>
     </div>
 </div>

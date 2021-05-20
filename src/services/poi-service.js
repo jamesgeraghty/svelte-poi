@@ -1,4 +1,5 @@
 import axios from "axios";
+import {user} from "../stores";
 
 export class PoiService {
   categoryList = [];
@@ -42,19 +43,41 @@ export class PoiService {
   async login(email, password) {
     try {
       const response = await axios.post(`${this.baseUrl}/api/users/authenticate`, {email, password});
-      return response.status == 200;
+      if (response.data.success) {
+        axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.token;
+        return true;
+      }
+      return false;
     } catch (error) {
       return false;
     }
   }
-  async addPoi(poi, text, category) {
+
+  async logout() {
+    user.set({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      _id: ""
+    });
+    axios.defaults.headers.common["Authorization"] = "";
+  }
+
+  async addPoi(poi, text, method,latitude, longitude, name, category ) {
     try {
       const newPois = {
         poi: poi,
         text: text,
+        method: method,
+        latitude:latitude,
+        longitude: longitude,
+        name: name,
         category: category,
+
       };
-      const response = await axios.post(this.baseUrl + "/api/categories/" + category._id + "/poi", newPois);
+      this.poiList.push(addPoi);
+      const response = await axios.post(this.baseUrl + "/api/pois/" + newPois._id );
       return response.status == 200;
     } catch (error) {
       return false;

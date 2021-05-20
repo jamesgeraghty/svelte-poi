@@ -5,7 +5,7 @@
 
     let categoryList = [];
     let amount = 0;
-    let selectedpoi = 0;
+    let selectedPoi = 0;
     let selectedCategory = 0;
     let methods = ["Kilcash Woods", "Kilcash Walk", "Slievenamon"]
     let errorMessage = "";
@@ -19,9 +19,9 @@
     });
 
     async function addPoi() {
-        const success = await poiService.addPoi(amount, methods[selectedpoi], categoryList[selectedCategory])
+        const success = await poiService.addPoi(amount, methods[selectedPoi], categoryList[selectedCategory])
         if (success) {
-
+         //   if (justDonated) justDonated(amount, categoryList[selectedCategory]);
         } else {
             errorMessage = "Donation not completed - some error occurred";
         }
@@ -40,22 +40,12 @@
             </div>
             <div class="uk-margin">
                 <div class="uk-form-label">Categories </div>
-                <div class="uk-form-controls">
-                    <select name="category" class="uk-select">
-                        {#if categoryList}
-                            {#each categoryList as category}
-                                <tr>
-                                    <td>{category.name}</td>
-                                </tr>
-                            {/each}
-                        {/if}}
-                    </select>
-                </div>
+
                 <div class="uk-form-controls">
                 <div class="uk-form-controls">
-                    <label><input bind:group={selectedpoi} value={0} class="uk-radio" type="radio" name="method"> {methods[0]} </label><br>
-                    <label><input bind:group={selectedpoi} value={1} class="uk-radio" type="radio" name="method"> {methods[1]} </label><br>
-                    <label><input bind:group={selectedpoi} value={2} class="uk-radio" type="radio" name="method"> {methods[2]} </label>
+                    <label><input bind:group={selectedPoi} value={0} class="uk-radio" type="radio" name="method"> {methods[0]} </label><br>
+                    <label><input bind:group={selectedPoi} value={1} class="uk-radio" type="radio" name="method"> {methods[1]} </label><br>
+                    <label><input bind:group={selectedPoi} value={2} class="uk-radio" type="radio" name="method"> {methods[2]} </label>
                 </div>
             </div>
             </div>
@@ -74,7 +64,7 @@
                 </div>
             </div>
             <div class="uk-margin">
-                <button class="submit uk-button uk-button-primary uk-button-large uk-width-1-1">Donate</button>
+                <button class="submit uk-button uk-button-primary uk-button-large uk-width-1-1">Add Point of Interest</button>
             </div>
             {#if errorMessage}
                 <div class="uk-text-left uk-text-small">

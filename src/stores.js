@@ -9,7 +9,7 @@ export const welcomeBar = [
   },
   {
     title: "Log In",
-    icon: "fas fa-user-edit fa-3x",
+    icon: "fas fa-sign-in-alt fa-3x",
     colour: "color:green",
     link: "/#/login",
   },
@@ -19,17 +19,17 @@ export const mainBar = [
 
   {
     title: "Add POI",
-    icon: "fas fa-hand-holding-usd fa-3x",
+    icon: "fas fa-map-marked fa-3x",
     colour: "color:rgb(153, 196, 74)",
     link: "/#/addPoi",
   },
     {
-  title: "Donations",
-  icon: "fas fa-hand-holding-usd fa-3x",
+  title: "Points of Interest",
+  icon: "far fa-list-alt fa-3x",
   colour: "color:rgb(153, 196, 74)",
   link: "/#/pois",
 }, {
-  title: "Candidates",
+  title: "Categories",
   icon: "fas fa-clipboard-list fa-3x",
   colour: "color:rgb(63, 122, 139)",
   link: "/#/categories",
