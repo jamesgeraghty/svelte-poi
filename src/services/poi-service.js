@@ -8,6 +8,9 @@ export class PoiService {
 
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
+    if (localStorage.pois) {
+      axios.defaults.headers.common["Authorization"] = "Bearer " + JSON.parse(localStorage.pois);
+    }
   }
 
   async getCategories() {
@@ -44,7 +47,11 @@ export class PoiService {
     try {
       const response = await axios.post(`${this.baseUrl}/api/users/authenticate`, {email, password});
       if (response.data.success) {
-        axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.token;
+        user.set({
+          email: email,
+          token: response.data.token
+        });
+        localStorage.pois = JSON.stringify(response.data.token);
         return true;
       }
       return false;
@@ -55,13 +62,11 @@ export class PoiService {
 
   async logout() {
     user.set({
-      firstName: "",
-      lastName: "",
       email: "",
-      password: "",
-      _id: ""
+      token: ""
     });
     axios.defaults.headers.common["Authorization"] = "";
+    localStorage.pois = null;
   }
 
   async addPoi(poi, text, method,latitude, longitude, name, category ) {

@@ -18,12 +18,12 @@
       </div>
     </div>
     <div class="uk-card uk-card-small uk-text-center uk-padding-remove">
-      <a target="_blank" href="https://github.com/wit-hdip-comp-sci-2020/donation-svelte">
+      <a target="_blank" href="https://github.com/jamesgeraghty/svelte-poi">
         <div>
           <span uk-icon="icon: github; ratio: 3.5"></span>
         </div>
         <div class="uk-width-expand@m uk-text-left">
-          <div class="uk-text-muted uk-text-center" style="font-size:xx-small">{$user.firstName} {$user.lastName}</div>
+          <div class="uk-text-muted uk-text-center" style="font-size:xx-small">{$user.email}</div>
         </div>
       </a>
     </div>
