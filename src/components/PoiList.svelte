@@ -18,7 +18,6 @@
     <th>Point of Interest</th>
     <th>Location</th>
     <th>Difficulty</th>
-    <th>Weather</th>
     <th>Latitude</th>
     <th>Longitude</th>
     <th>User Name</th>
@@ -34,7 +33,7 @@
           <td> {pointofinterst.method} </td>
           <td>{pointofinterst.latitude}</td>
           <td>{pointofinterst.longitude}</td>
-          <td> {pointofinterst.firstName}, {pointofinterst.lastName} </td>
+          <td> {pointofinterst.name}, {pointofinterst.lastName} </td>
           <td>{pointofinterst.category.name}</td>
           <td><i class="far fa-trash-alt fa-1x" ></i></td>
           <td><i class="far fa-edit fa-1x" style=></i></td>
