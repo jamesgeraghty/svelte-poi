@@ -60,6 +60,24 @@ export class PoiService {
     }
   }
 
+  async signup(firstName, lastName, email, password) {
+    try {
+      const userDetails = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+      };
+      const response = await axios.post(this.baseUrl + "/api/users", userDetails);
+      const newUser = await response.data;
+      user.set(newUser);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  };
+
+
   async logout() {
     user.set({
       email: "",
