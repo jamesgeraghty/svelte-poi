@@ -1,9 +1,15 @@
 
 <script>
   import {getContext, onMount} from 'svelte'
+  import { PoiService } from "../services/poi-service";
 
   const poiService = getContext("PoiService");
   let poiList = [];
+
+  let categoryList;
+  onMount(async () => {
+    categoryList = await poiService.getCategories()
+  })
 
   onMount(async () => {
     poiList= await poiService.getPointsofinterest();
@@ -17,8 +23,7 @@
     <thead>
     <th>Point of Interest</th>
     <th>Location</th>
-    <th>Difficulty</th>
-    <th>Weather</th>
+    <th>Rating</th>
     <th>Latitude</th>
     <th>Longitude</th>
     <th>User Name</th>
@@ -35,7 +40,7 @@
           <td>{pointofinterst.latitude}</td>
           <td>{pointofinterst.longitude}</td>
           <td> {pointofinterst.firstName}, {pointofinterst.lastName} </td>
-          <td>{pointofinterst.category.name}</td>
+          <td>{pointofinterst.category}</td>
           <td><i class="far fa-trash-alt fa-1x" ></i></td>
           <td><i class="far fa-edit fa-1x" style=></i></td>
         </tr>
