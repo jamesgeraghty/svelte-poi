@@ -1,7 +1,7 @@
 <script>
   import {title, subTitle, navBar, welcomeBar} from "../stores"
   import kilcash from "/src/assets/kilcash.jpg";
-  title.set("Donation Services Inc");
+  title.set("Svelte Point of Interests");
   subTitle.set("Sign up or Log in");
 
   navBar.set({

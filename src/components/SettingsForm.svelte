@@ -27,7 +27,7 @@
 
 
     async function save() {
-        let success = await poiService.updateSettings(firstName, lastName, email, password, $user._id)
+        let success = await poiService.updateSettings(firstName, lastName, email, password, $user._id);
         if (success) {
             message = "Settings updated";
         } else {

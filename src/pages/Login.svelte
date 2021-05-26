@@ -2,7 +2,7 @@
   import {title, subTitle, navBar, welcomeBar} from "../stores"
   import LoginForm from "../components/LoginForm.svelte"
   import image3 from "/src/assets/image3.jpg";
-  title.set("Donation Services Inc");
+  title.set("Svelte Point of Interests");
   subTitle.set("Please Log in");
 
   navBar.set({

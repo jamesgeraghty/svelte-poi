@@ -76,6 +76,7 @@ export class PoiService {
       return false;
     }
   };
+
   async updateSettings(firstName, lastName, email, password, id) {
     try {
       const userDetails = {
@@ -115,11 +116,13 @@ export class PoiService {
         category: category,
 
       };
-      const response = await axios.post(this.baseUrl + "/api/pois/" + newPois._id );
+      const response = await axios.post(this.baseUrl + "/api/pois", poi);
       return response.status == 200;
     } catch (error) {
       return false;
     }
-  }
+  };
+
+
 
 }

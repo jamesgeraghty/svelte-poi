@@ -1,7 +1,13 @@
-<script lang="ts">
+<script >
     import {mainBar, navBar, subTitle, title} from "../stores";
     import image2 from "/src/assets/image2.jpg";
     import SettingsForm from "../components/SettingsForm.svelte";
+    import { PoiService } from "../services/poi-service"
+    import {writable} from "svelte/store";
+    import {getContext, onMount} from "svelte";
+
+
+    const poiService = getContext("PoiService");
 
     title.set("Svelte Points of Interest");
     subTitle.set("Edits and then save your settings");
