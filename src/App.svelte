@@ -9,6 +9,7 @@
   import Addpoi from "./pages/Addpoi.svelte";
   import Navigator from "./components/Navigator.svelte";
   import Router from "svelte-spa-router";
+  import Settings from "./pages/Settings.svelte";
 
   setContext("PoiService", new PoiService("http://laptop-burpbof6:4000"));
 
@@ -19,6 +20,7 @@
     "/categories": Categories,
     "/pois": Pois,
     "/addPoi": Addpoi,
+    "/settings" : Settings,
     "/logout" : Main
   }
 </script>

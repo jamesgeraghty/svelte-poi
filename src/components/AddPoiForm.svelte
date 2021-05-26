@@ -23,7 +23,7 @@
         if (success) {
          //   if (justDonated) justDonated(amount, categoryList[selectedCategory]);
         } else {
-            errorMessage = "Donation not completed - some error occurred";
+            errorMessage = "POI not added - some error occurred";
         }
     }
 </script>

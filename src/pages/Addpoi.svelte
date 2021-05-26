@@ -23,8 +23,8 @@
 
 
 
-    title.set("Donation Services Inc.");
-    subTitle.set("Make a Donation!");
+    title.set("Svelte Kilcash Points of Interest");
+    subTitle.set("Add a new Point of Interest!");
     navBar.set({
         bar: mainBar
     });

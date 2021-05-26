@@ -33,7 +33,12 @@ export const mainBar = [
   icon: "fas fa-clipboard-list fa-3x",
   colour: "color:rgb(63, 122, 139)",
   link: "/#/categories",
-}, {
+},  {
+    title: "Settings",
+    icon: "fas fa-sliders-h fa-3x",
+    colour: "color:rgb(14, 168, 160)",
+    link: "/#/settings",
+  }, {
   title: "Logout",
   icon: "fas fa-sign-out-alt fa-3x",
   colour: "color:rgb(156, 70, 128)",
@@ -48,6 +53,11 @@ export const title = writable("");
 export const subTitle = writable("");
 
 export const user = writable({
+
+  firstName: "",
+  lastName: "",
   email: "",
-  token: ""
+  password: "",
+ // token: "",
+  _id:""
 });

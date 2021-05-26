@@ -76,7 +76,24 @@ export class PoiService {
       return false;
     }
   };
-
+  async updateSettings(firstName, lastName, email, password, id) {
+    try {
+      const userDetails = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+        _id: id
+      };
+      console.log(userDetails);
+      const response = await axios.put(`${this.baseUrl}/api/users/${id}`, userDetails);
+      const newUser = await response.data;
+      user.set(newUser);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
 
   async logout() {
     user.set({
@@ -87,7 +104,7 @@ export class PoiService {
     localStorage.pois = null;
   }
 
-  async addPoi(poi, text, method,latitude, longitude, name, category ) {
+  async addPoi(poi, text, method,latitude, longitude, category ) {
     try {
       const newPois = {
         poi: poi,
@@ -95,11 +112,9 @@ export class PoiService {
         method: method,
         latitude:latitude,
         longitude: longitude,
-        name: name,
         category: category,
 
       };
-      this.poiList.push(addPoi);
       const response = await axios.post(this.baseUrl + "/api/pois/" + newPois._id );
       return response.status == 200;
     } catch (error) {
