@@ -1,7 +1,8 @@
+
 # Points of Interest - Svelte
 
-Points of Interedt Client application for [Enterprise Web Development](https://tutors-svelte.netlify.app/#/course/wit-hdip-comp-sci-2020-ent-web-dev.netlify.app)
-
+Points of Interest Client application for [Enterprise Web Development](https://tutors-svelte.netlify.app/#/course/wit-hdip-comp-sci-2020-ent-web-dev.netlify.app)
+The main 
 ---
 > **Updated Version**
 ---
@@ -21,4 +22,7 @@ Consumes API implemented by
 - Chai
 - Mocha
 - Jsonwebtoken
+
+
+
 

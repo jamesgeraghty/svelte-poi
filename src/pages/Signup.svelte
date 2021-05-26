@@ -3,7 +3,7 @@
     import {title, subTitle, navBar, welcomeBar} from "../stores"
     import SignupForm from "../components/SignupForm.svelte"
 
-    title.set("Svelte Points of Interets Kilcash");
+    title.set("Svelte Point of Interests");
     subTitle.set("Please Sign up");
 
     navBar.set({
